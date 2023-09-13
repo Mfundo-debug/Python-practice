@@ -21,8 +21,12 @@ def findall_iter(S):
     """
     >>> findall_iter('rabcdeefgyYhFjkIoomnpOeorteeeeet')
     ['ee', 'Ioo', 'Oeo', 'eeeee']
+    >>> findall_iter('match a single character not present in the list below')
+    [-1]
     """
-    return re.findall(r'(?<=[qwrtypsdfghjklzxcvbnm])([aeiou]{2,})(?=[qwrtypsdfghjklzxcvbnm])', S, re.I)
+    pattern = r'(?<=[qwrtypsdfghjklzxcvbnm])([aeiou]{2,})(?=[qwrtypsdfghjklzxcvbnm])'
+    matches = re.findall(pattern, S, re.I)
+    return matches if matches else [-1]
 
 if __name__ == "__main__":
     import doctest
