@@ -12,28 +12,26 @@ The next N lines contain HTML code.
 Constraints
 0 < N < 100
 """
-import re 
+from html.parser import HTMLParser
 
-def html_parser(html):
-    pattern = r'<(\w+)(.*?)>'
-    match = re.findall(pattern, html)
-    for m in match:
-        print('Start :', m[0])
-        if m[1]:
-            attr = re.findall(r'(\w+)=[\'\"](.*?)[\'\"]', m[1])
-            if attr:
-                for a in attr:
-                    print('->', a[0], '>', a[1])
-            else:
-                print('->', m[1].strip(), '>', 'None')
-        else:
-            print('Empty :', m[0])
-        print('End   :', m[0])
-    return
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        print('Start :', tag)
+        for attr in attrs:
+            print('->', attr[0], '>', attr[1])
+    
+    def handle_endtag(self, tag):
+        print('End   :', tag)
+    
+    def handle_startendtag(self, tag, attrs):
+        print('Empty :', tag)
+        for attr in attrs:
+            print('->', attr[0], '>', attr[1])
 
 if __name__ == '__main__':
     n = int(input())
     html = ''
     for _ in range(n):
         html += input()
-    html_parser(html)
+    parser = MyHTMLParser()
+    parser.feed(html)
