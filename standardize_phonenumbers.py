@@ -6,11 +6,10 @@ The given mobile numbers may have +91,91  or 0 written before the actual 10 digi
 Alternatively, there may not be any prefix at all.
 
 Input Format
-
 The first line of input contains an integer N, the number of mobile phone numbers.
 N lines follow each containing a mobile number.
-Output Format
 
+Output Format
 Print N mobile numbers on separate lines in the required format.
 """
 
