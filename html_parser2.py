@@ -24,14 +24,16 @@ class MyHTMLParser(HTMLParser):
         print(data)
     
     def handle_data(self, data):
-        if data != '\n':
+        if data.strip() and data != '\n':
             print('>>> Data')
             print(data)
 
 if __name__ == '__main__':
-    n = int(input())
-    html = ''
-    for _ in range(n):
-        html += input()
+    html = ""
+    for i in range(int(input())):
+        html += input().rstrip()
+        html += '\n'
+    
     parser = MyHTMLParser()
     parser.feed(html)
+    parser.close()
