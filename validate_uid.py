@@ -20,7 +20,6 @@ For each test case, print 'Valid' if the UID is valid.
 Otherwise, print 'Invalid', on separate lines. 
 Do not print the quotation marks.
 """
-import string
 
 if __name__ == '__main__':
     for _ in range(int(input())):
