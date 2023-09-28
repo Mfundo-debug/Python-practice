@@ -20,11 +20,12 @@ For each test case, print 'Valid' if the UID is valid.
 Otherwise, print 'Invalid', on separate lines. 
 Do not print the quotation marks.
 """
+import string
+
 if __name__ == '__main__':
-    import re
     for _ in range(int(input())):
         uid = input()
-        if len(uid) == 10 and re.search(r'[A-Z]{2,}', uid) and re.search(r'\d{3,}', uid) and not re.search(r'[^a-zA-Z0-9]', uid) and not re.search(r'(.)\1', uid):
+        if len(uid) == 10 and uid.isalnum() and sum(c.isupper() for c in uid) >= 2 and sum(c.isdigit() for c in uid) >= 3 and not any(uid.count(c) > 1 for c in uid):
             print('Valid')
         else:
             print('Invalid')
