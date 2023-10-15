@@ -14,4 +14,4 @@ import numpy
 if __name__ =='__main__':
     n = int(input())
     a = numpy.array([input().split() for _ in range(n)], float)
-    print(numpy.linalg.det(a))
+    print(round(numpy.linalg.det(a),2))
