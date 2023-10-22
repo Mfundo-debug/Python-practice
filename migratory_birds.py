@@ -33,14 +33,21 @@ import re
 import sys
 
 def migratoryBirds(arr):
-    # Write your code here
     birds = {}
     for bird in arr:
         if bird in birds:
             birds[bird] += 1
         else:
             birds[bird] = 1
-    return max(birds, key=birds.get)
+    max_count = 0
+    max_bird = 0
+    for bird, count in birds.items():
+        if count > max_count:
+            max_count = count
+            max_bird = bird
+        elif count == max_count and bird < max_bird:
+            max_bird = bird
+    return max_bird
 
 if __name__ == '__main__':
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
