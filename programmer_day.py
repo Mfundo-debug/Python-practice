@@ -33,7 +33,6 @@ import re
 import sys
 
 def dayOfProgrammer(year):
-    # Write your code here
     if year == 1918:
         return '26.09.1918'
     elif year < 1918:
