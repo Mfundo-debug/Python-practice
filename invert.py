@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
 """
 Explanation:
-GitHub Copilot: This Python script reads a JSON file, inverts its key-value pairs, and writes the inverted dictionary back to two output files. Here's a step-by-step explanation:
+This Python script reads a JSON file, inverts its key-value pairs, and writes the inverted dictionary back to two output files. Here's a step-by-step explanation:
 
 1. The script expects three command-line arguments: the input file, the output file for the inverted JSON, and another output file for the inverted JSON in a different format. If the number of arguments is not correct, it prints a usage message and exits.
 
