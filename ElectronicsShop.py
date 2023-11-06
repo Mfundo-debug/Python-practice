@@ -29,21 +29,26 @@ Constraints
 1 <= b <= 10^6
 The price of each item is in the inclusive range [1,10^6].
 """
+from bisect import bisect
+
 def getMoneySpent(keyboards, drives, b):
-    keyboards.sort(reverse=True)
-    drives.sort(reverse=True)
-    max = -1
-    for i in keyboards:
-        for j in drives:
-            if i+j > b:
-                break
-            elif i+j > max:
-                max = i+j
-    return max
+    keyboards.sort()
+    drives.sort()
+    max_price = -1
+    for k in keyboards:
+        if k < b:
+            index = bisect(drives, b - k)
+            if index > 0:
+                price = k + drives[index - 1]
+                max_price = max(max_price, price)
+    return max_price
 
 if __name__ == '__main__':
-    b = 10
-    keyboards = [3,1]
-    drives = [5,2,8]
+    bnm = input().split()
+    b = int(bnm[0])
+    n = int(bnm[1])
+    m = int(bnm[2])
+    keyboards = list(map(int, input().rstrip().split()))
+    drives = list(map(int, input().rstrip().split()))
     moneySpent = getMoneySpent(keyboards, drives, b)
     print(moneySpent)
