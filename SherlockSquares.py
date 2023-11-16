@@ -27,12 +27,11 @@ Constraints
 1<=q<=100
 1<=a<=b<=10^9
 """
+import math
 def squares(a,b):
-    count=0
-    for i in range(a,b+1):
-        if (i**0.5).is_integer():
-            count+=1
-    return count
+    sqrt_a = math.ceil(math.sqrt(a))
+    sqrt_b = math.floor(math.sqrt(b))
+    return sqrt_b - sqrt_a + 1
 if __name__ == '__main__':
     q = int(input())
     for q_itr in range(q):
