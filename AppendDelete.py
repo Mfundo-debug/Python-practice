@@ -37,16 +37,17 @@ s and t consist of lowercase English alphabetic letters, ascii[a-z].
 """
 
 def appendAndDelete(s,t,k):
-    if len(s)+len(t)<=k:
+    i = 0
+    while i < min(len(s), len(t)) and s[i] == t[i]:
+        i += 1
+    total = len(s) - i + len(t) - i
+    if total <= k and total % 2 == k % 2:
+        return 'Yes'
+    elif len(s) + len(t) <= k:
         return 'Yes'
     else:
-        for i in range(min(len(s),len(t))):
-            if s[i]!=t[i]:
-                break
-        if (len(s)-i)+(len(t)-i)<=k and (len(s)-i)+(len(t)-i)%2==k%2:
-            return 'Yes'
-        else:
-            return 'No'
+        return 'No'
+    
         
 if __name__=='__main__':
     s=input()
