@@ -28,7 +28,6 @@ Constraints
 1 <= width[k] <= 3, where 0 <= k < n
 """
 def serviceLane(n, cases):
-    # Write your code here
     result = []
     for i in range(len(cases)):
         result.append(min(width[cases[i][0]:cases[i][1]+1]))
