@@ -20,7 +20,7 @@ Each string is guaranteed to represent a positive integer without leading zeros.
 The total number of digits across all strings in unsorted is between 1 and 10^6 (inclusive).
 """
 def bigSorting(unsorted):
-    unsorted.sort(key=int)
+    unsorted.sort(key=lambda x: (len(x), x))
     return unsorted
 
 if __name__ == '__main__':
