@@ -14,7 +14,7 @@ Complete the insertionSort2 function in the editor below.
 
 insertionSort2 has the following parameter(s):
 
-int n: the length of arr
+int n: the length of arr[n]
 int arr[n]: an array of integers
 Constraints
 1 <= n <= 1000
