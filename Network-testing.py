@@ -21,3 +21,15 @@ print("Available devices in the network:")
 print("IP" + " "*18+"MAC")
 for client in devices:
     print("{:16}    {}".format(client['ip'], client['mac']))
+
+
+import subprocess
+
+def get_bios_version():
+    try:
+        result = subprocess.run(['wmic', 'bios', 'get', 'smbiosbiosversion'], capture_output=True, text=True)
+        return result.stdout.split('\n')[1].strip()
+    except Exception as e:
+        return str(e)
+
+print(get_bios_version())
