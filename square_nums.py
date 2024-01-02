@@ -3,7 +3,10 @@ def square_numbers(nums):
     return squared_nums
 
 if __name__ == "__main__":
-    user_input = input("Enter a list of numbers (separated by commas): ")
-    numbers = [int(x) for x in user_input.split(",")]
-    result = square_numbers(numbers)
-    print(result)
+    try:
+        user_input = input("Enter a list of numbers (separated by commas): ")
+        numbers = [int(x) for x in user_input.split(",")]
+        result = square_numbers(numbers)
+        print(result)
+    except ValueError:
+        print("Invalid input. Please enter a valid list of numbers.")
