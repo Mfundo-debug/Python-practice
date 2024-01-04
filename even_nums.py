@@ -5,7 +5,7 @@ for i in x:
         even_nums.append(i)
 print(even_nums)
 
-#Alternative method
+#Alternative method 
 
 even_nums = [i for i in x if i % 2 == 0]
 print(even_nums)
