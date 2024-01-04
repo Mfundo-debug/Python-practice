@@ -1,3 +1,9 @@
-x = [1,-2,3,-4]
-neg_nums = [x for x in x if x<0]
-print(neg_nums)
+def find_negative_numbers():
+    x = input("Enter a list of numbers: ")
+    x = [int(num) for num in x.split()]
+    neg_nums = [num for num in x if num < 0]
+    return neg_nums
+
+if __name__ == "__main__":
+    neg_nums = find_negative_numbers()
+    print(neg_nums)
