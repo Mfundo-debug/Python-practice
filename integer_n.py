@@ -15,7 +15,7 @@ elif n % 2 == 0 and n > 20:
 else:
     print("Invalid input")
 
-# alternative solution: using list comprehension
+ alternative solution: using list comprehension
 # word = ["Weird" if n % 2 != 0 else "Not Weird"\
 #          if n % 2 == 0 and n in range(2, 6) else "Weird"\
 #               if n % 2 == 0 and n in range(6, 21) else "Not Weird" \ 
