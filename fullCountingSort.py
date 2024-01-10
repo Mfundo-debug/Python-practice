@@ -39,9 +39,9 @@ def countSort(arr):
         if i < n//2:
             arr[i][1] = '-'
         arr[i][0] = int(arr[i][0])
-    arr.sort(key=lambda x: x[0])
-    for i in range(n):
-        print(arr[i][1], end=' ')
+    sorted_arr = sorted(arr, key=lambda x: x[0])
+    result = ' '.join([item[1] for item in sorted_arr])
+    print(result)
 
 if __name__ == '__main__':
     n = int(input().strip())
