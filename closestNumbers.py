@@ -32,6 +32,7 @@ def closestNumbers(arr):
             result.append(arr[i])
             result.append(arr[i+1])
     return result
+    
 if __name__ == '__main__':
     n = int(input().strip())
     arr = list(map(int, input().rstrip().split()))
