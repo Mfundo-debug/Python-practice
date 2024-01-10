@@ -33,4 +33,21 @@ n is even
 s[i] consists of characters in the range ascii[a-z]
 """
 def countSort(arr):
+    # Write your code here
+    n = len(arr)
+    for i in range(n):
+        if i < n//2:
+            arr[i][1] = '-'
+        arr[i][0] = int(arr[i][0])
+    arr.sort(key=lambda x: x[0])
+    for i in range(n):
+        print(arr[i][1], end=' ')
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    arr = []
+    for _ in range(n):
+        arr.append(input().rstrip().split())
+    countSort(arr) 
+
     
