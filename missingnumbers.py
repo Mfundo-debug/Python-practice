@@ -39,6 +39,7 @@ def missingNumbers(arr,brr):
         missing.append(brr[j])
         j += 1
     return sorted(set(missing))
+    
 if __name__ == '__main__':
     arr_count = int(input().strip())
     arr = list(map(int, input().rstrip().split()))
