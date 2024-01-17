@@ -14,7 +14,6 @@ missingNumbers has the following parameter(s):
 int arr[n]: the array with missing numbers
 int brr[m]: the original array of numbers
 Returns
-
 int[]: an array of integers
 COnstraints
 1 <= n, m <= 2 x 10^5
@@ -39,7 +38,7 @@ def missingNumbers(arr,brr):
         missing.append(brr[j])
         j += 1
     return sorted(set(missing))
-    
+
 if __name__ == '__main__':
     arr_count = int(input().strip())
     arr = list(map(int, input().rstrip().split()))
