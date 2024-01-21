@@ -8,6 +8,7 @@ use list comprehension
 """
 def sortedSquares(nums):
     return sorted([i**2 for i in nums])
+    
 if __name__ == '__main__':
     nums = list(map(int, input().rstrip().split()))
     result = sortedSquares(nums)
