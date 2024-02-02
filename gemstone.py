@@ -25,16 +25,11 @@ Each composition arr[i] consists of only lower-case Latin letters ('a'-'z').
 
 def gemstones(arr):
     # Write your code here
-    gemstones = 0
-    for mineral in arr[0]:
-        is_gemstone = True
-        for rock in arr[1:]:
-            if mineral not in rock:
-                is_gemstone = False
-                break
-        if is_gemstone:
-            gemstones += 1
-    return gemstones
+    gemstones = set(arr[0])
+    for i in range(1, len(arr)):
+        gemstones = gemstones.intersection(set(arr[i]))
+
+    return len(gemstones)
 
 if __name__ == '__main__':
     n = int(input().strip())
