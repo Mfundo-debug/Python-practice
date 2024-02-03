@@ -24,7 +24,6 @@ Each composition arr[i] consists of only lower-case Latin letters ('a'-'z').
 """
 
 def gemstones(arr):
-    # Write your code here
     gemstones = set(arr[0])
     for i in range(1, len(arr)):
         gemstones = gemstones.intersection(set(arr[i]))
