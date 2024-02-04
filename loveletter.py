@@ -6,6 +6,7 @@ The following operations are performed:
 Append a character to the end of the string: "abc".
 Constraints:
 1 <= |s| <= 10^3
+
 s[i] is a lowercase English letter.
 """
 def theLoveLetterMystery(s):
