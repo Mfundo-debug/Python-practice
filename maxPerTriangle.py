@@ -37,3 +37,4 @@ if __name__ == '__main__':
     n = int(input().strip())
     sticks = list(map(int, input().rstrip().split()))
     result = maximumPerimeterTriangle(sticks)
+    print(result)
