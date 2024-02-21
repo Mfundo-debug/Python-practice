@@ -12,33 +12,31 @@ COnstrainsts
 2 <= K <= 10^3
 All values in the input are distinct and are between 1 and 10^3
 """
-from collections import deque, defaultdict
+from collections import defaultdict
 
-def favouriteSeq(N, arr):
-    graph = defaultdict(list)
-    indegree = defaultdict(int)
-    for seq in arr:
-        for i in range(len(seq) - 1):
-            graph[seq[i]].append(seq[i+1])
-            indegree[seq[i+1]] += 1
+n = int(input())
+before_maps = defaultdict(set)
+after_maps = defaultdict(set)
+for _ in range(n):
+    k = int(input())
+    sequence = map(int, input().split())
+    prev = 0
+    for num in sequence:
+        if prev:
+            before_maps[num].add(prev)
+        after_maps[prev].add(num)
+        prev = num
 
-    queue = deque([node for node in graph if indegree[node] == 0])
-    result = []
+m = []
+actives = set(active for active in after_maps[0] if not before_maps[active])
+while actives:
+    next_step = sorted(actives)[0]
 
-    while queue:
-        node = queue.popleft()
-        result.append(node)
-        for neighbor in graph[node]:
-            indegree[neighbor] -= 1
-            if indegree[neighbor] == 0:
-                queue.append(neighbor)
+    actives.remove(next_step)
+    for step in after_maps[next_step]:
+        before_maps[step].remove(next_step)
 
-    return result
+    actives.update(active for active in after_maps[next_step] if not before_maps[active])
+    m.append(next_step)
 
-if __name__ == "__main__":
-    N = int(input().strip())
-    arr = []
-    for i in range(N):
-        arr.append(list(map(int, input().split())))
-    result = favouriteSeq(N, arr)
-    print(" ".join(map(str, result)))
+print(' '.join(map(str, m)))
