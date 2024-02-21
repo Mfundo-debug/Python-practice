@@ -12,12 +12,14 @@ COnstrainsts
 2 <= K <= 10^3
 All values in the input are distinct and are between 1 and 10^3
 """
+from collections import defaultdict
+
 def favouriteSeq(N, arr):
-    res = []
+    order = defaultdict(list)
     for i in range(N):
         for j in range(len(arr[i])):
-            if arr[i][j] not in res:
-                res.append(arr[i][j])
+            order[arr[i][j]].append(i)
+    res = sorted(order.keys(), key=lambda x: order[x][0])
     return res
 
 if __name__ == "__main__":
