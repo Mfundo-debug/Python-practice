@@ -12,15 +12,28 @@ COnstrainsts
 2 <= K <= 10^3
 All values in the input are distinct and are between 1 and 10^3
 """
-from collections import defaultdict
+from collections import deque, defaultdict
 
 def favouriteSeq(N, arr):
-    order = defaultdict(list)
-    for i in range(N):
-        for j in range(len(arr[i])):
-            order[arr[i][j]].append(i)
-    res = sorted(order.keys(), key=lambda x: order[x][0])
-    return res
+    graph = defaultdict(list)
+    indegree = defaultdict(int)
+    for seq in arr:
+        for i in range(len(seq) - 1):
+            graph[seq[i]].append(seq[i+1])
+            indegree[seq[i+1]] += 1
+
+    queue = deque([node for node in graph if indegree[node] == 0])
+    result = []
+
+    while queue:
+        node = queue.popleft()
+        result.append(node)
+        for neighbor in graph[node]:
+            indegree[neighbor] -= 1
+            if indegree[neighbor] == 0:
+                queue.append(neighbor)
+
+    return result
 
 if __name__ == "__main__":
     N = int(input().strip())
