@@ -33,29 +33,34 @@ Each character i in the number is an integer where 0 <= i <= 9
 """
 def highestValuePalindrome(s, n, k):
     s = list(s)
-    diff = 0
+    changes = [0]*n
+
+    # Step 1: Make the string a palindrome
     for i in range(n//2):
         if s[i] != s[n-i-1]:
-            diff += 1
-    if diff > k:
+            k -= 1
+            changes[i] = 1
+            s[i] = s[n-i-1] = max(s[i], s[n-i-1])
+
+    if k < 0:
         return '-1'
-    for i in range(n//2):
-        if s[i] != s[n-i-1]:
-            if s[i] > s[n-i-1]:
-                s[n-i-1] = s[i]
-            else:
-                s[i] = s[n-i-1]
+
+    # Step 2: Maximize the palindrome
+    i = 0
+    while k > 0 and i < n//2:
+        if s[i] < '9':
+            if changes[i] == 1 and k >= 1:
+                s[i] = s[n-i-1] = '9'
                 k -= 1
-    for i in range(n//2):
-        if s[i] != '9':
-            if k >= 2 and s[i] == s[n-i-1]:
+            elif changes[i] == 0 and k >= 2:
                 s[i] = s[n-i-1] = '9'
                 k -= 2
-            elif k >= 1 and s[i] != s[n-i-1]:
-                s[i] = s[n-i-1] = '9'
-                k -= 1
+        i += 1
+
+    # If there's still changes left and the length is odd, maximize the middle digit
     if k > 0 and n%2 == 1:
         s[n//2] = '9'
+
     return ''.join(s)
 
 if __name__ == '__main__':
