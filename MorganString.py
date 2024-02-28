@@ -24,11 +24,13 @@ a and b contain upper-case letters only, ascii[A-Z]
 """
 
 def morganAndString(a, b):
+    a += 'z'
+    b += 'z'
     res = ''
     i = 0
     j = 0
-    while i < len(a) or j < len(b):
-        if j >= len(b) or (i < len(a) and a[i:] < b[j:]):
+    while i < len(a) - 1 or j < len(b) - 1:
+        if a[i:] < b[j:]:
             res += a[i]
             i += 1
         else:
