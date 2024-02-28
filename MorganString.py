@@ -23,19 +23,37 @@ Constraints
 a and b contain upper-case letters only, ascii[A-Z]
 """
 
-from collections import deque
-
 def morganAndString(a, b):
-    a = deque(a)
-    b = deque(b)
-    res = []
-    while a and b:
-        if a < b:
-            res.append(a.popleft())
+    result = ''
+    i = 0
+    j = 0
+
+    while i < len(a) and j < len(b):
+        if a[i:] < b[j:]:
+            result += a[i]
+            i += 1
+        elif a[i:] > b[j:]:
+            result += b[j]
+            j += 1
         else:
-            res.append(b.popleft())
-    res.extend(a or b)
-    return ''.join(res)
+            # Look ahead to the next unequal characters
+            k = 0
+            while i + k < len(a) and j + k < len(b) and a[i+k] == b[j+k]:
+                k += 1
+            if j + k == len(b) or (i + k < len(a) and a[i+k] < b[j+k]):
+                result += a[i]
+                i += 1
+            else:
+                result += b[j]
+                j += 1
+
+    # Append the remaining characters of a and b to the result
+    if i < len(a):
+        result += a[i:]
+    if j < len(b):
+        result += b[j:]
+
+    return result 
 
 if __name__ == '__main__':
     t = int(input().strip())
