@@ -18,6 +18,7 @@ n is divisible by 4
 gene[i] is the element of [CGAT]
 subtask
 4 <= n <= 2000 in tests worth 30% of the total score.
+failed 1 test
 """
 def steadyGene(gene):
     n = len(gene)
