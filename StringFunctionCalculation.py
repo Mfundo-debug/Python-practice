@@ -16,7 +16,8 @@ def max_value_of_f_s(t):
     for i in range(n):
         for j in range(i+1, n+1):
             s = t[i:j]
-            max_value = max(max_value, len(s) * t.count(s))
+            count_s = sum(1 for k in range(n-j+1) if t[k:k+j-i] == s
+            max_value = max(max_value, len(s) * count_s)
     return max_value
 
 if __name__ == '__main__':
