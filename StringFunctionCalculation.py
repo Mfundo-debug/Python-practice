@@ -9,6 +9,7 @@ Print the maximum value of f(s) among all the substrings (s) of string t.
 Constraints
 1 <= |t| <= 10^5
 The string consists lowercase English alphabets
+1 test failed
 """
 def max_value_of_f_s(t):
     n = len(t)
