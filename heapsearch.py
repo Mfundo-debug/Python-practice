@@ -1,5 +1,6 @@
 """
 implementation of heapsearch algorithm
+ any list
 """
 import heapq
 
