@@ -29,3 +29,13 @@ plt.show()
 
 # Print the R^2 value
 print('R^2:', r2_score(y, y_pred))
+
+# plot the uncertainty
+plt.figure(figsize=(10, 5))
+plt.scatter(x, y, s=10)
+plt.plot(x, y_pred, color='r')
+plt.fill_between(x.ravel(), y_pred.ravel() - 2, y_pred.ravel() + 2, color='red', alpha=0.2)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Linear Regression with uncertainty')
+plt.show()
