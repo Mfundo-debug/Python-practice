@@ -15,7 +15,7 @@ def binary_search(arr, target):
     return -1
 
 if __name__ == '__main__':
-    arr = [1, 1, 2, 2, 3, 3]
+    arr = [1, 1, 2, 2, 2, 3, 3]
     target = 2
     idx = binary_search(arr, target)
     if idx == -1:
