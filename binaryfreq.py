@@ -1,6 +1,7 @@
 """
 arr = ([2,2,1,1,3,3])
 Using binary search, find the frequency of a number in a sorted array.
+
 """
 def binary_search(arr, target):
     left, right = 0, len(arr) - 1
