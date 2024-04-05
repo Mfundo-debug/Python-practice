@@ -1,6 +1,7 @@
 """
 Given an array ([2,4,2,5,6,3,2])
 use heap algorithm to find the frequency of a number in an unsorted array.
+
 """
 import heapq
 
