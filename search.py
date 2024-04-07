@@ -4,6 +4,7 @@ use the following constants:
 k = 8.99e9
 q = 1e-9
 r = 1
+
 """
 import math
 import numpy as np
