@@ -4,6 +4,7 @@ If there are no positive and even integers, return 0.
 Example:
 Input: [1, 2, 3, 4, 5]
 Output: 6
+
 """
 def sum_positive_even_numbers(numbers):
     # Initialize the sum
