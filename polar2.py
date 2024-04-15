@@ -1,5 +1,6 @@
 """
 Find the equation of the polar curve r = 1 + cos(theta)
+
 """
 
 import matplotlib.pyplot as plt
