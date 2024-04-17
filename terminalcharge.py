@@ -9,6 +9,7 @@ Args:
 
      Returns:
         float: the early termination charge
+        
 
 """
 
