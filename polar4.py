@@ -3,6 +3,7 @@ given sphere coordinates, find the rectangular coordinates
 constraints:
 0 ≤ θ ≤ 2π
 0 ≤ φ ≤ π
+
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,5 +23,5 @@ if __name__ == '__main__':
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.plot_surface(x, y, z, alpha=0.5)
-    plt.title(r'$r = 1$')
+    plt.title(r'$r = 4$')
     plt.show()
