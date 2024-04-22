@@ -1,6 +1,7 @@
 """
 given radius = 5, find the area of the circle and the circumference
 find the equation of the circle in rectangular form
+
 """
 import numpy as np
 import matplotlib.pyplot as plt
