@@ -14,8 +14,7 @@ Args:
 """
 
 def calculate_early_termination_charge(remaining_months,
-                                       difference_per_month,
-                                       total_months=48):
+                                       difference_per_month):
     return remaining_months * difference_per_month
 
 def main():
