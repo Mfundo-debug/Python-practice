@@ -11,6 +11,7 @@ k = 2
 Pick any two elements, test subarr = [4, 7]
 unfairness = max(4, 7) - min(4, 7) = 3
 Testing for all pairs, the solution [1, 2] provides the minimum unfairness.
+Note: Integers in arr may not be unique.
 Function Description
 
 Complete the maxMin function in the editor below.
