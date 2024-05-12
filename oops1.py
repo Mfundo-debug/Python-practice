@@ -1,6 +1,7 @@
 class Product:
     pass
 prod = []
+x = Product()
 
 for i in range(1,4):
     obj = Product()
