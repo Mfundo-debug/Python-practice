@@ -13,7 +13,8 @@ toys has the following parameter(s):
 
 w: an array of integers that represent the weights of each order to ship
 
-Constraints:
+Constraints:\\
+    
 1 <= n <= 10^5
 0 <= w[i] <= 10^4, where 0 <= i < n
 
