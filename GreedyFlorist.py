@@ -12,6 +12,7 @@ Function Description
 
 Complete the getMinimumCost function in the editor below.
 
+
 getMinimumCost has the following parameter(s):
 
 int c[n]: the original price of each flower
