@@ -22,6 +22,7 @@ Returns
 int: the minimum starting botEnergy
 Constraints
 1 ≤ n ≤ 10^5
+
 1 ≤ arr[i] ≤ 10^5 where 1 ≤ i ≤ n
 """
 def chiefHopper(arr):
