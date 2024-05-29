@@ -15,7 +15,6 @@ flippingBits has the following parameter(s):
 
 int n: an integer
 Returns
-
 int: the unsigned decimal integer result
 
 Constraints
