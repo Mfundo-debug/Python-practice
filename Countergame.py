@@ -18,7 +18,6 @@ counterGame has the following parameter(s):
 
 int n: the initial game counter value
 Returns
-
 string: either Richard or Louise
 Constraints
 1 <= n <= 2^64 - 1
