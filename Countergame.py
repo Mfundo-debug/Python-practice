@@ -31,7 +31,7 @@ def counterGame(n):
         else:
             n -= 2 ** (n.bit_length() - 1)
         counter += 1
-    return 'Louise' if counter % 2 == 0 else 'Richard'
+    return 'Richard' if counter % 2 == 0 else 'Louise'
 
 if __name__ == '__main__':
     t = int(input().strip())
