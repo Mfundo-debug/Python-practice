@@ -6,7 +6,6 @@ Function Description
 Complete the sansaXor function in the editor below.
 
 sansaXor has the following parameter(s):
-
 int arr[n]: an array of integers
 Returns
 
