@@ -24,20 +24,20 @@ Constraints
 |s| = n + k - 1
 it is guaranteed that the string is a valid encoded binary string.
 """
-def cipher(k, s):
-    n = len(s)
+def cipher(n, k, s):
     res = [0] * n
-    res[0] = int(s[0])
-    for i in range(1, n):
-        res[i] = int(s[i]) ^ int(s[i - 1])
-    for i in range(1, n):
-        res[i] ^= res[i - 1]
-    return ''.join(map(str, res[k - 1:]))
+    xor = 0
+    for i in range(n + k - 1):
+        xor ^= int(s[i])
+        if i >= n:
+            xor ^= res[i - n]
+        res[i % n] = xor
+    return ''.join(map(str, res))
 
 if __name__ == '__main__':
     nk = input().split()
     n = int(nk[0])
     k = int(nk[1])
     s = input()
-    result = cipher(k, s)
+    result = cipher(n, k, s)
     print(result)
