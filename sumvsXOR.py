@@ -11,6 +11,7 @@ There are four values that satisfy the condition:
 4 + 2 = 4 ^ 2 = 6
 4 + 3 = 4 ^ 3 = 7
 Return 4.
+
 Function Description
 
 Complete the sumXor function in the editor below.
