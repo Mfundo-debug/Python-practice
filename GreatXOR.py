@@ -30,12 +30,10 @@ For 50% of the maximum score:
 """
 
 def theGreatXor(x):
-    # Find the binary representation of x
-    binary = bin(x)[2:]
-    # Count the number of 0s in the binary representation of x
-    count = binary.count('0')
-    # Return 2 raised to the power of the number of 0s in the binary representation of x
-    return 2**count
+    # Find the number of bits in the binary representation of x
+    num_bits = len(bin(x)) - 2
+    # Find the number of values of a that satisfy the conditions
+    return 2 ** (num_bits - 1) - x
 
 if __name__ == '__main__':
     q = int(input().strip())
