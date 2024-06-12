@@ -1,0 +1,101 @@
+---
+format:
+  dashboard:
+    nav-buttons: [github]
+logo: Logo.png
+server: shiny
+theme: [sandstone, theme/custom.scss]
+fig-width: 10
+fig-asp: 0.3
+params:
+  month: "January"
+  year: 2024
+editor: visual
+---
+
+```{r}
+#| context: setup
+library(tidyverse)
+library(readxl)
+library(scales)
+library(highcharter)
+library(DT)
+library(gt)
+library(shiny)
+library(bslib)
+library(bsicons)
+library(shinydashboard)
+theme_set(theme_minimal(base_size = 24, base_family="Atkinson Hyperlegible")) 
+
+year_data <- read.csv('Avis_iLease_Year_EDA.csv') |>
+  mutate(Month = factor(Month, levels = c("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")),
+         Year = as.character(Year)) |>
+  filter(Year !=0) |>
+  drop_na(Month)
+```
+
+
+#  {.sidebar}
+```{r}
+selectInput("select_year", label = h5("Select Year"),
+    choices = unique(year_data$Year),
+    selected = unique(year_data$Year)[1])
+selectInput("select_month", label = h5("Select Month"),
+    choices = unique(year_data$Month),
+    selected = unique(year_data$Month)[1])
+```
+
+
+This dashboard displays statistic for:
+
+| Age Group             | Age Interval      |
+|-----------------------|-------------------|
+| `Young Professionals` | 20-30             |
+| `Adults`              | 31-49             |
+| `Pensioners`          | 50+               |
+| **Month**             | `{r} input$select_month` `{r} input$select_year`|
+
+------------------------------------------------------------------------
+
+In `{r} input$select_month` `{r} input$select_year` the applicants in the unit was as follows:
+
+| Age_group           | Total |
+|---------------------|-------|
+| Young Professionals | 117   |
+| Adults              | 450   |
+| Pensioners          | 63    |
+| Without ID          | 12    |
+| **Total**           | 642   |
+
+------------------------------------------------------------------------
+
+::: callout-note
+## Disclaimer
+
+This is for Avis iLease only
+:::
+
+
+
+
+```{r}
+#| context: server
+
+# filter the data based on the selected parameters
+filtered_data <- reactive({
+    year_data |>
+      filter(Month == input$select_month & Year == input$select_year)
+  })
+
+output$data <- renderTable({
+  filtered_data()
+})
+
+output$time_period <- renderText({
+  paste(input$select_month, input$select_year)
+})
+```
+
+
+
+
