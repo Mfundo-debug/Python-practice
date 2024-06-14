@@ -21,7 +21,6 @@ int k: the number of important contests Lena can lose
 int contests[n][2]: a 2D array of integers where each contests[i] contains two integers that represent the luck balance and importance of the i^th contest
 Returns
 - int: the maximum luck balance achievable
-
 Constraints
 1 <= n <= 100
 0 <= k <= N
