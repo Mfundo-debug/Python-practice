@@ -8,7 +8,6 @@ operations = [[1,2,10],[3,5,10]]
 The array has 5 elements that all start at 0. In the first operation, add 10 to rthe first 2 elements. Now the array is [10, 10, 0, 0, 0]. In the second operation, add 10 to the last 3 elements. Now the array is [10, 10, 10, 10, 10]. The average is (10+10+10+10+10)/5 = 10.
 
 Function Description
-
 Complete the solve function in the editor below.
 
 solve has the following parameters:
