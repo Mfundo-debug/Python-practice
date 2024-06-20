@@ -3,6 +3,7 @@ You are given an integer, N. Write a program to determine if N is an element of 
 The first few elements of the Fibonacci sequence are 0,1,1,2,3,5,8,13....
 A Fibonacci sequence is one where every element is a sum of the previous two elements in the sequence. 
 The first two elements are 0 and 1.
+
 Function Description
 
 Complete the isFibo function in the editor below.
