@@ -11,7 +11,9 @@ def candy_store(n, k):
     return n**k
 
 if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        n, k = map(int, input().split())
-        print(candy_store(n, k))
+    t = int(input().strip())
+    for t_itr in range(t):
+        n = int(input().strip())
+    k = int(input().strip())
+    result = candy_store(n, k)
+    print(result)
