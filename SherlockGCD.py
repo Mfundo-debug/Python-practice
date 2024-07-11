@@ -8,6 +8,7 @@ Constraints
 1 <= T <= 10
 1 <= N <= 100
 1 <= ai <= 10^5 for all (1 <= i <= N)
+
 """
 def solve(a):
     if len(a) == 1:
