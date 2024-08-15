@@ -9,7 +9,6 @@ sherlockAndMinimax has the following parameters:
 - arr: an array of integers
 - p: an integer that represents the lowest value of the range for M
 - q: an integer that represents the highest value of the range for M
-
 Constraints
  1 <= n <= 100
     1 <= arr[i] <= 10^9
