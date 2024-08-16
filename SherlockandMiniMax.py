@@ -4,7 +4,6 @@ Oce that has been determined for all integers in the ranger, return M which gene
 
 Function Description:
 Complete the sherlockAndMinimax function in the editor below. It should return an integer as described.
-
 sherlockAndMinimax has the following parameters:
 - arr: an array of integers
 - p: an integer that represents the lowest value of the range for M
