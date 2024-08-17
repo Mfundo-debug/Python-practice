@@ -1,6 +1,6 @@
 """
 Watson gives Sherlock an array of integers. Given the endpoints of an integer range, for all M in the range, find the minimum value of max(abs(M-A[i])) where A[i] is an element in the array.
-Oce that has been determined for all integers in the ranger, return M which generated the maximum of those values. if there are multiple M that result in that value, return the smallest one.
+Once that has been determined for all integers in the ranger, return M which generated the maximum of those values. if there are multiple M that result in that value, return the smallest one.
 
 Function Description:
 Complete the sherlockAndMinimax function in the editor below. It should return an integer as described.
