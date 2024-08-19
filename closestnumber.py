@@ -5,6 +5,7 @@ Constraints:
  1 <= a,b,x <= 10^9
  1 <= T <= 10^5
  1<= a^b <= 10^9
+ 
 """
 
 def closestNumber(a,b,x):
