@@ -7,7 +7,6 @@ Constraints:
  1<= a^b <= 10^9
  
 """
-
 def closestNumber(a,b,x):
     m = a**b
     n = m // x
