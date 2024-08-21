@@ -19,5 +19,5 @@ if __name__ == '__main__':
     T = int(input().strip())
     for _ in range(T):
         a,b,x = map(int, input().rstrip().split())
-        result = closestNumber(a,b,x)
+        result = int(closestNumber(a,b,x))
         print(str(result) + '\n')
