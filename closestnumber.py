@@ -1,5 +1,6 @@
 """
-You are given 3 numbers a,b, and x. You need to output the multiple of x which is closest to a^b. If more than one answer is possible then output the smallest one.
+You are given 3 numbers a,b, and x. You need to output the multiple of x which is closest to a^b. 
+If more than one answer is possible then output the smallest one.
 
 Constraints:
  1 <= a,b,x <= 10^9
