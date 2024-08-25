@@ -17,6 +17,7 @@ def closestNumber(a,b,x):
         return (n + 1) * x
     
 if __name__ == '__main__':
+    
     T = int(input().strip())
     for _ in range(T):
         a,b,x = map(int, input().rstrip().split())
