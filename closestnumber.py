@@ -3,6 +3,7 @@ You are given 3 numbers a,b, and x. You need to output the multiple of x which i
 If more than one answer is possible then output the smallest one.
 
 Constraints:
+
  1 <= a,b,x <= 10^9
  1 <= T <= 10^5
  1<= a^b <= 10^9
