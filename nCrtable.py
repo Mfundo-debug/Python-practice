@@ -11,9 +11,8 @@ Constraints:
  1 <= n <= 1000
  1 <= T <=200
 """
-
 def solve(n):
-    MOD = 10**9
+    MOD = 10**9 + 7
     nCr = [[0 for i in range(n+1)] for j in range(n+1)]
     for i in range(n+1):
         for j in range(i+1):
@@ -24,10 +23,21 @@ def solve(n):
     return nCr
 
 if __name__ == '__main__':
-    T = int(input())
+    import sys
+    input = sys.stdin.read
+    data = input().split()
+    
+    T = int(data[0])
+    index = 1
+    results = []
+    
     for _ in range(T):
-        n = int(input())
+        n = int(data[index])
+        index += 1
         nCr = solve(n)
+        result = []
         for i in range(n+1):
-            print(' '.join(map(str, nCr[i][:i+1])))
-        print()
+            result.append(' '.join(map(str, nCr[i][:i+1])))
+        results.append('\n'.join(result))
+    
+    print('\n\n'.join(results))
