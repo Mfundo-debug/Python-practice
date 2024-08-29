@@ -4,7 +4,7 @@ Jim is doing his discrete maths homework which requires him to repeatedly calcul
 If you are June, how will you calculate nCr values for different values of n?
 Since nCr values can be very large, output them modulo 10^9.
 
-Oytput format:
+Output format:
 For each n output the list of nC0 to nCn each separated by a single space in a new line. if the number is large, output it modulo 10^9.
 
 Constraints:
