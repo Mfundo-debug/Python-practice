@@ -23,6 +23,7 @@ Constraints:
 """
 
 def maximumDraws(n):
+    
     return n + 1
 
 if __name__ == '__main__':
