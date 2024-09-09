@@ -24,7 +24,7 @@ s1 != s2
 """
 
 def movingTiles(l, s1, s2, queries):
-    # Write your code here
+
     result = []
     for q in queries:
         result.append((l * 2 ** 0.5 - ((s1 - s2) ** 0.5) * q) / abs(s1 - s2))
