@@ -21,6 +21,7 @@ Constraints:
 1 <= q <= 10^5
 1 <= queries[i] <= 10^9
 s1 != s2
+
 """
 
 def movingTiles(l, s1, s2, queries):
