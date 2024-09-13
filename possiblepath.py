@@ -5,6 +5,7 @@ It is given that he can move to any point on this 2D grid, i.e., the points havi
 Tell Adam whether he can reach (x, y) or not.
 
 Constraints:
+
 1 <= T <= 100
 1 <= a, b, x, y <= 10^18
 """
