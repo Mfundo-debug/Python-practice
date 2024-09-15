@@ -14,6 +14,7 @@ def solve(a, b, x, y):
     
     if a > x or b > y:
         return False
+    
     if a == x and b == y:
         return True
     return solve(a+b, b, x, y) or solve(a, a+b, x, y)
