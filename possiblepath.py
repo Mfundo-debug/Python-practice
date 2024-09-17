@@ -9,7 +9,6 @@ Constraints:
 1 <= T <= 100
 1 <= a, b, x, y <= 10^18
 
-
 """
 
 def solve(a, b, x, y):
