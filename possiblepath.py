@@ -1,6 +1,7 @@
 """
 Adam is standing at the point (a, b) in an infinite 2D grid. He wants to know if he can reach the point (x, y) or not. 
 The only operation he can do is to move to the point (a+b, b) or (a, a+b) from some point (a, b). 
+
 It is given that he can move to any point on this 2D grid, i.e., the points having positive or negative (a+b) and (b) co-ordinates.
 Tell Adam whether he can reach (x, y) or not.
 
