@@ -1,6 +1,7 @@
 import numpy as np
 
 # define the function to be integrated
+
 def integrand(x, y):
     return (x - y) / (np.pi * x - y * np.pi**2)
 
