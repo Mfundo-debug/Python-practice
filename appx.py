@@ -18,5 +18,6 @@ real_roots = np.unique(np.round(roots[np.isreal(roots)], 5))
 x_values = real_roots - real_roots**2
 
 # Print the solutions
+
 for y, x in zip(real_roots, x_values):
     print(f"y = {y}, x = {x}")
