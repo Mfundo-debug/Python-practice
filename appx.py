@@ -12,6 +12,7 @@ initial_guesses = [0, 1, -1, 2]
 roots = fsolve(equation, initial_guesses)
 
 # Filter out complex roots and duplicates
+
 real_roots = np.unique(np.round(roots[np.isreal(roots)], 5))
 
 # Calculate corresponding x values
