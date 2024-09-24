@@ -6,6 +6,7 @@ def integrand(x, y):
     return (x - y) / (np.pi * x - y * np.pi**2)
 
 #number of random samples
+
 N = 100000
 
 # generate random samples for x and y
