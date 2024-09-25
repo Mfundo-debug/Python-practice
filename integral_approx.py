@@ -10,6 +10,7 @@ def integrand(x, y):
 N = 100000
 
 # generate random samples for x and y
+
 x_samples = np.random.uniform(0, 1, N)
 y_samples = np.random.uniform(0, 1, N)
 
