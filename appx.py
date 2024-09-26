@@ -9,6 +9,7 @@ def equation(y):
 initial_guesses = [0, 1, -1, 2]
 
 # Find the roots
+
 roots = fsolve(equation, initial_guesses)
 
 # Filter out complex roots and duplicates
